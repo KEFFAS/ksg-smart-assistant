@@ -416,7 +416,7 @@ body {
 }
 """
 
-with gr.Blocks(css=custom_css) as app:
+with gr.Blocks() as app:
 
     # ---------------- HEADER ----------------
     gr.HTML(
@@ -441,9 +441,8 @@ with gr.Blocks(css=custom_css) as app:
     # ---------------- USER PANEL ----------------
     with user_panel:
         with gr.Column(elem_classes="panel"):
-            welcome = gr.Markdown("### 👤 Welcome",{name})
-            
-            chat = gr.Chatbot(type="messages", height=300)
+            welcome = gr.Markdown("### 👤 Welcome, {name}!")
+            chat = gr.Chatbot(height=300)
 
             with gr.Row():
                 msg = gr.Textbox(placeholder="Type your message here...", scale=4)
@@ -468,7 +467,7 @@ with gr.Blocks(css=custom_css) as app:
                 placeholder="Enter session ID"
             )
 
-            admin_chat = gr.Chatbot(type="messages", height=350)
+            admin_chat = gr.Chatbot(height=350)
 
             with gr.Row():
                 admin_msg = gr.Textbox(
@@ -515,4 +514,4 @@ with gr.Blocks(css=custom_css) as app:
 # ---------------------------
 if __name__ == "__main__":
     build_index()
-    app.launch(server_name="0.0.0.0", server_port=10000)
+    app.launch(server_name="0.0.0.0", server_port=10000, css=custom_css)

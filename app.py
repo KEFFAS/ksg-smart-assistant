@@ -514,4 +514,11 @@ with gr.Blocks() as app:
 # ---------------------------
 if __name__ == "__main__":
     build_index()
-    app.launch(server_name="0.0.0.0", server_port=10000, css=custom_css)
+
+    import os
+    port = int(os.environ.get("PORT", 10000))
+
+    app.launch(
+        server_name="0.0.0.0",
+        server_port=port
+    )

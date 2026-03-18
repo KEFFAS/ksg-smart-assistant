@@ -1,0 +1,53 @@
+# ---------------------------
+# Python
+# ---------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# ---------------------------
+# Virtual Environments
+# ---------------------------
+venv/
+env/
+.venv/
+
+# ---------------------------
+# Environment Variables (VERY IMPORTANT)
+# ---------------------------
+.env
+
+# ---------------------------
+# Embeddings / Index (auto-generated)
+# ---------------------------
+index_chunks.json
+
+# ---------------------------
+# OS Files
+# ---------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------
+# IDE / Editors
+# ---------------------------
+.vscode/
+.idea/
+
+# ---------------------------
+# Jupyter
+# ---------------------------
+.ipynb_checkpoints/
+
+# ---------------------------
+# Temporary files
+# ---------------------------
+*.tmp
+*.bak
+
+# ---------------------------
+# IMPORTANT: DO NOT IGNORE PDFs
+# ---------------------------
+# docs/*.pdf   <-- intentionally NOT ignored
